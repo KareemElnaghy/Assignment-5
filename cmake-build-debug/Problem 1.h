@@ -8,7 +8,7 @@
 #include <iostream>
 using namespace std;
 
-const int SIZE = 6668;
+const int SIZE = 6668; //global variable size of the heap
 
 struct exchangeInfo {
     std::string date;
