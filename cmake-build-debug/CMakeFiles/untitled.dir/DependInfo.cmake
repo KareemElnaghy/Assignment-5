@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mac/Desktop/Data Structures/Assignment-5-ADS/cmake-build-debug/Problem 1.cpp" "CMakeFiles/untitled.dir/Problem_1.cpp.o" "gcc" "CMakeFiles/untitled.dir/Problem_1.cpp.o.d"
-  "/Users/mac/Desktop/Data Structures/Assignment-5-ADS/cmake-build-debug/main.cpp" "CMakeFiles/untitled.dir/main.cpp.o" "gcc" "CMakeFiles/untitled.dir/main.cpp.o.d"
+  "C:/Users/Asus/CLionProjects/Assignment-5/cmake-build-debug/Problem 1.cpp" "CMakeFiles/untitled.dir/Problem_1.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Problem_1.cpp.obj.d"
+  "C:/Users/Asus/CLionProjects/Assignment-5/cmake-build-debug/main.cpp" "CMakeFiles/untitled.dir/main.cpp.obj" "gcc" "CMakeFiles/untitled.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -6,25 +6,22 @@
 #define UNTITLED_PROBLEM_1_H
 #include <string>
 #include <iostream>
+#include <limits>
 using namespace std;
 
 const int SIZE = 6668; //global variable size of the heap
 
-struct exchangeInfo {
+struct exchangeInfo {               //exchange info which contains the date and exchange rate
     std::string date;
     float value;
 };
-struct maxsub{
-    string date;
-    float value;
-};
-void getExchangeData(exchangeInfo data[]) ;
+
+void getExchangeData(exchangeInfo data[]) ;         //function prototypes
 
 void minHeapify(exchangeInfo data[], int size, int index) ;
 
 void maxHeapify(exchangeInfo data[], int size, int index) ;
 
-// Build a Min-Heap in descending order.
 void buildMinHeap(exchangeInfo data[], int size) ;
 
 
@@ -37,5 +34,7 @@ void mostPositiveChanges(exchangeInfo arr[],int num,float mean) ;
 
 void mostNegativeChanges(exchangeInfo arr[], int num, float mean) ;
 
-float maxsubsequence(maxsub arr[],exchangeInfo arr2[],int n, float mean);
+
+
+
 #endif //UNTITLED_PROBLEM_1_H

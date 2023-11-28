@@ -8,7 +8,7 @@
 using namespace std;
 
 
-void getExchangeData(exchangeInfo data[]) {
+void getExchangeData(exchangeInfo data[]) {         // reads from the txt file and puts data into an array
     ifstream file("exchangeRate.txt");
     string line;
     int currentIndex = 0;
@@ -29,7 +29,7 @@ void getExchangeData(exchangeInfo data[]) {
     file.close();
 }
 
-void minHeapify(exchangeInfo data[], int size, int index) {
+void minHeapify(exchangeInfo data[], int size, int index) {         // minheapify algorithm
     int minIndex = index;
     int leftChild = 2 * index + 1;
     int rightChild = 2 * index + 2;
@@ -49,7 +49,7 @@ void minHeapify(exchangeInfo data[], int size, int index) {
     }
 }
 
-void maxHeapify(exchangeInfo data[], int size, int index) {
+void maxHeapify(exchangeInfo data[], int size, int index) {     // maxheapify algorithm
     int maxIndex = index;
     int leftChild = 2 * index + 1;
     int rightChild = 2 * index + 2;
@@ -69,7 +69,7 @@ void maxHeapify(exchangeInfo data[], int size, int index) {
     }
 }
 
-// Build a Min-Heap in descending order.
+// Build a Min-Heap
 void buildMinHeap(exchangeInfo data[], int size) {
     for (int i = size / 2 - 1; i >= 0; i--)
         minHeapify(data, size, i);
@@ -81,6 +81,7 @@ void buildMinHeap(exchangeInfo data[], int size) {
 }
 
 
+// Build a Max-Heap
 void buildMaxHeap(exchangeInfo data[], int size) {
     for (int i = size / 2 - 1; i >= 0; i--)
         maxHeapify(data, size, i);
@@ -92,7 +93,7 @@ void buildMaxHeap(exchangeInfo data[], int size) {
     }
 }
 
-
+// Returns the mean of the exchange rates
 float getMean(exchangeInfo arr[])
 {
     float sum = 0;
@@ -104,6 +105,7 @@ float getMean(exchangeInfo arr[])
     return(sum/SIZE);
 }
 
+// Outputs the N most Positive Changes in the exchange rate
 void mostPositiveChanges(exchangeInfo arr[],int num,float mean) {
     buildMinHeap(arr, SIZE);
     cout<<"Top "<<num<<" Positive Changes: "<<endl;
@@ -115,6 +117,7 @@ void mostPositiveChanges(exchangeInfo arr[],int num,float mean) {
     cout<<endl;
 }
 
+// Outputs the N most Negative Changes in the exchange rate
 void mostNegativeChanges(exchangeInfo arr[], int num, float mean) {
     // Build a Max-Heap
     buildMaxHeap(arr, SIZE);
@@ -130,11 +133,4 @@ void mostNegativeChanges(exchangeInfo arr[], int num, float mean) {
     }
     cout<<endl;
 }
-float maxsubsequence (maxsub arr[],exchangeInfo arr2[],int n, float mean)
-{
-    for(int i=0;i<6668;i++){
-        arr[i].date=arr2[i].date;
-        arr[i].value=arr2[i].value;
-    }
-    
-}
+
