@@ -37,7 +37,7 @@ int main() {
 // The function for the mostPositiveChanges and mostNegativeChanges has a complexity of O(Nlog N), since it iterates
 // over the first N elements and calls the buildmaxheap and buildminheap functions.
 // The maximum subsequence function has a time complexity of O(N) since it iterates over the size of the heap.
-
+//
 // Therefore, the total complexity of the entire program will be O(Nlog N) which is a result of the addition of the
 // complexities of all the functions used in the program and by neglecting lower order terms. Since Nlog N > logN > N,
 // the overall time complexity will be O(Nlog N).
